@@ -18,7 +18,7 @@ public class Day04 extends Day {
 
     @Override
     public boolean shouldWarmup() {
-        return false;
+        return true;
     }
 
     @Override
