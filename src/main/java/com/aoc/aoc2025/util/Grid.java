@@ -21,19 +21,19 @@ public class Grid {
         }
     }
 
-    public char get(int x, int y) {
-        return grid[y][x];
+    public char get(long x, long y) {
+        return grid[(int) y][(int) x];
     }
 
-    public int countOccupiedNeighbours(int x, int y) {
+    public int countOccupiedNeighbours(long x, long y) {
         int count = 0;
         for (int i = -1; i <= 1; i++) {
             for (int j = -1; j <= 1; j++) {
                 if (i == 0 && j == 0) {
                     continue;
                 }
-                int newX = x + i;
-                int newY = y + j;
+                int newX = (int) x + i;
+                int newY = (int) y + j;
                 if (newX < 0 || newX >= width || newY < 0 || newY >= height) {
                     continue;
                 }
@@ -45,8 +45,8 @@ public class Grid {
         return count;
     }
 
-    public void removeAt(int x, int y) {
-        grid[y][x] = '.';
+    public void removeAt(long x, long y) {
+        grid[(int) y][(int) x] = '.';
     }
 
 }

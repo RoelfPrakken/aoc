@@ -4,10 +4,10 @@ import lombok.Getter;
 
 @Getter
 public class Point {
-    private int x;
-    private int y;
+    private long x;
+    private long y;
 
-    public Point(int x, int y) {
+    public Point(long x, long y) {
         this.x = x;
         this.y = y;
     }
