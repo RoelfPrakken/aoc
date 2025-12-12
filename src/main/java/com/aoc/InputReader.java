@@ -18,7 +18,7 @@ public class InputReader {
         return readResource(String.format("aoc%d/examples/day%02d.txt", year, day));
     }
 
-    private static List<String> readResource(String path) {
+    public static List<String> readResource(String path) {
         try (InputStream inputStream = InputReader.class.getClassLoader().getResourceAsStream(path)) {
             if (inputStream == null) {
                 throw new IllegalArgumentException("File not found: " + path);
